@@ -1,0 +1,20 @@
+
+# Example application for reading 1 bytes from device at adres 68 using repated start ( read reg = 21 )
+# Instructions
+# Sample Write Instruction
+# W A D [MASK] [NEXT ADR]
+# Sample Read Instruction
+# R A [COMPARE DATA] [COMPARE MASK] [NEXT ADR]
+
+W 108 68	; Write to TX Fifo
+W 108 21	; Write to TX Fifo
+W 100 D 	; Write to (Control Register) (TX + MSMS + EN)
+#R 100		; Dummy read to delay TX fifo evaluation
+R 104 80 80	; Poll tx fifo empty (from SR)
+W 120 0		; Write to RX Prog Depth
+W 100 25	; (Control Register) (RSTA + MSMS + EN)
+W 108 69	; (Transmit FIFO )
+R 104 0 40	; Poll rx fifo not empty (from SR)
+W 100 1		; (Control Register) (EN)
+R 10c		; Read rx fifo
+
