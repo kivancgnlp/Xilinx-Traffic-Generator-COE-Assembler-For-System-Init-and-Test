@@ -11,8 +11,8 @@
 
 int main(){
 
-    const std::string file_path_base{ R"(C:\xilinx_ws\vivado_ws\KC\I2C_testbench_ex\axi_iic_0_ex\imports\atg_16)" };
-    //const std::string file_path_base{ "/Users/kivanc/Documents/GitHub/Kiv_Cpp_Calismalar/ROM (COE) file reader for Xilinx Traffic Generator ( System Init and Test )/sample_data/atg" };
+    
+    const std::string file_path_base{ "/Users/kivanc/Documents/GitHub/Kiv_Cpp_Calismalar/ROM (COE) file reader for Xilinx Traffic Generator ( System Init and Test )/sample_data/atg" };
    
     constexpr bool input_coe_files_in_hex = true;
     constexpr bool also_convert_input_files_to_hexadecimal = false;
@@ -25,8 +25,8 @@ int main(){
         return -1;
     }
 
-    cfu.load_known_adr_map(R"(D:\BilgiSistemKivDec\2025-01-22\Kiv_Cpp_Calismalar\ROM (COE) file reader for Xilinx Traffic Generator ( System Init and Test )\aux_data\known_adrs.txt)");
-    //cfu.load_known_adr_map("/Users/kivanc/Documents/GitHub/Kiv_Cpp_Calismalar/ROM (COE) file reader for Xilinx Traffic Generator ( System Init and Test )/aux_data/known_adrs.txt");
+    
+    cfu.load_known_adr_map("/Users/kivanc/Documents/GitHub/Kiv_Cpp_Calismalar/ROM (COE) file reader for Xilinx Traffic Generator ( System Init and Test )/aux_data/known_adrs.txt");
     
   
     cfu.skip_header();
