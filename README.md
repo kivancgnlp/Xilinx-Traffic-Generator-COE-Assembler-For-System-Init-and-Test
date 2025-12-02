@@ -28,4 +28,28 @@ Examples :
 
 ## See the "Example_assembly_apps" folder for sample applications
 
+## Build and run instructions 
 
+
+### Run 
+```
+./Coe_Assembler .\I2C_App_1.txt
+Starting to read asm file : .\I2C_App_1.txt
+[0] Write : 20 <= d0
+[1] Write : 108 <= 68
+[2] Write : 108 <= 21
+[3] Write : 120 <= 1
+[4] Write : 100 <= d
+[5] Read from : 20, compare mask : 4, compare data : 4
+[6] Write : 20 <= 4
+[7] Write : 100 <= 25
+[8] Write : 108 <= 69
+[9] Read from : 100
+[10] Read from : 20, compare mask : 4, compare data : 4
+[11] Write : 20 <= 4
+[12] Read from : 20, compare mask : 8, compare data : 8
+[13] Write : 20 <= 8
+[14] Write : 100 <= 1
+[15] Read from : 10c
+[16] Read from : 10c
+```
