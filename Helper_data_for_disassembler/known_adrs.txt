@@ -1,0 +1,6 @@
+0x20	Interrupt Status Register
+0x100	Control Register
+0x104	Status Register
+0x108	Transmit FIFO 
+0x10C	Receive FIFO
+0x120	RX FIFO Prog Depth
